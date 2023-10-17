@@ -6,6 +6,7 @@ type Props = {
   listTopRated: any;
   listNowPlay: any;
   activeTab: string;
+  modeShow: string;
   handleChangeTab: (activeTab: string) => void;
 };
 const TAB = {
@@ -13,7 +14,7 @@ const TAB = {
   TOP_RATED: "TOP_RATED",
 };
 
-function Tab({ listTopRated, listNowPlay, activeTab, handleChangeTab }: Props) {
+function Tab({ listTopRated, listNowPlay, activeTab, handleChangeTab, modeShow }: Props) {
   const handleTab1 = () => {
     // update the state to tab1
     handleChangeTab(TAB.NOW_PLAY);
@@ -33,8 +34,8 @@ function Tab({ listTopRated, listNowPlay, activeTab, handleChangeTab }: Props) {
         </li>
       </ul>
       <div className="outlet">
-        {activeTab === TAB.NOW_PLAY && <ListMovie data={listNowPlay} />}
-        {activeTab === TAB.TOP_RATED && <ListMovie data={listTopRated} />}
+        {activeTab === TAB.NOW_PLAY && <ListMovie data={listNowPlay} modeShow={modeShow} />}
+        {activeTab === TAB.TOP_RATED && <ListMovie data={listTopRated} modeShow={modeShow} />}
       </div>
     </div>
   );

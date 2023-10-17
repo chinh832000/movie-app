@@ -1,4 +1,4 @@
-.catalogContainer {
+.catalogContainerGrid {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -12,7 +12,7 @@
     .item__img {
       height: 430px;
       background-color: beige;
-      overflow-y: hidden;
+      overflow: hidden;
       position: relative;
       background-color: black;
     }
@@ -21,6 +21,7 @@
       transition: all ease-in 0.2s;
       &hover {
         opacity: 0.3;
+        backdrop-filter: blur(8px);
         transform: scale(1.1);
       }
     }
@@ -31,17 +32,7 @@
       padding: 0.5rem;
       position: absolute;
       color: white;
-      background-color: #333533;
-      transition: all ease-in 0.3s;
-    }
-    .item__resume {
-      top: 0;
-      opacity: 0;
-      height: 100%;
-      padding: 0.5rem;
-      position: absolute;
-      color: white;
-      background-color: #333533;
+      // background-color: #333533;
       transition: all ease-in 0.3s;
     }
     .item__footer {
@@ -73,7 +64,7 @@
   }
 }
 
-.catalogContainer2 {
+.catalogContainerList {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -98,7 +89,8 @@
       transition: all ease-in 0.2s;
       object-fit: cover;
       &hover {
-        opacity: 0.3;
+        // opacity: 0.3;
+        backdrop-filter: blur(8px);
         transform: scale(1.1);
       }
     }
@@ -129,4 +121,16 @@
       border-radius: 10px;
     }
   }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }

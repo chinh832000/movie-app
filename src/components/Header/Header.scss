@@ -1,20 +1,24 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    color: #242423;
-    background-color: #f5cc5b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #242423;
+  background-color: #f5cc5b;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
   }
-  
-  .header__title {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .header {
-      flex-direction: row;
-    }
-  }
+}
+.header_search {
+  display: flex;
+  justify-content: flex-start;
+}

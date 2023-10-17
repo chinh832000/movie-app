@@ -8,7 +8,6 @@ export const Search = ({ handleSearch }: Props) => {
 
   const handleOnSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
     if (search) {
       handleSearch(search);
     }

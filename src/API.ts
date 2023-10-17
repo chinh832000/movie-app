@@ -39,7 +39,6 @@ const queryMovie = async (params: string) => {
     throw error;
   }
   const data = await res.json();
-  console.log("data", data);
   return data;
 };
 const getMovieDetail = async (id: string) => {
@@ -52,7 +51,6 @@ const getMovieDetail = async (id: string) => {
     throw error;
   }
   const data = await res.json();
-  console.log("data", data);
   return data;
 };
 
